@@ -16,7 +16,7 @@ function init() {
 
   function optionChanged(newSample) {
     buildMetadata(newSample);
-    //buildCharts(newSample);
+    buildCharts(newSample);
   }
 
   function buildMetadata(sample) {
@@ -28,12 +28,15 @@ function init() {
 
   
       PANEL.html("");
-      PANEL.append("h6").text("ID:" + result.id);
-      PANEL.append("h6").text("ETHNICITY:" + result.ethnicity);
-      PANEL.append("h6").text("GENDER:" + result.gender);
-      PANEL.append("h6").text("AGE:" + result.age);
-      PANEL.append("h6").text("LOCATION:" + result.location);
-      PANEL.append("h6").text("BBTYPE:" + result.bbtype);
-      PANEL.append("h6").text("WFREQ:" + result.wfreq);
+      Object.entries(result).forEach(([key, value]) => {
+        PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+      });
+      //PANEL.append("h6").text("ID:" + result.id);
+      //PANEL.append("h6").text("ETHNICITY:" + result.ethnicity);
+      //PANEL.append("h6").text("GENDER:" + result.gender);
+      //PANEL.append("h6").text("AGE:" + result.age);
+      //PANEL.append("h6").text("LOCATION:" + result.location);
+      //PANEL.append("h6").text("BBTYPE:" + result.bbtype);
+      //PANEL.append("h6").text("WFREQ:" + result.wfreq);
     });
   }
