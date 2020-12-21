@@ -1,10 +1,10 @@
 body {
 
-    color: #f7f7f7;
+    color: #1e0b74;
   }
 
 .jumbotron {
-  background-image: url("images/dna.jpg");
+  background-image: url("../images/dna.jpg");
   background-size: 100% 100%;
   text-align: center;
 }
