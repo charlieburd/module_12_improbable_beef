@@ -27,7 +27,6 @@ function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
   buildCharts(newSample);
-  
 }
 
 // Demographics Panel 
@@ -49,7 +48,6 @@ function buildMetadata(sample) {
     Object.entries(result).forEach(([key, value]) => {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
-
   });
 }
 
@@ -111,16 +109,13 @@ function buildCharts(sample) {
         mode:"markers",
         marker: {size: sample_values, color: otu_ids, colorscale: "Earth"},
         type: "bubble"
-
       }
-   
     ];
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       xaxis: {title: {text: 'OTU ID'}}
-      
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -176,11 +171,5 @@ function buildCharts(sample) {
 
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout);
-
-
-
-
-
-
   });
 }
