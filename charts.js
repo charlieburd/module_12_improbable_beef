@@ -147,7 +147,7 @@ function buildCharts(sample) {
         type: "indicator",
         mode: "gauge+number",
         //title: {text: "Belly Button Washing Frequency", font: {size: 20}},
-      
+
         gauge: {
           axis: {range: [null, 10]},
           bar: {color: "black"},
@@ -173,3 +173,4 @@ function buildCharts(sample) {
     Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
 }
+//what is the Obj fuction that  you see and why wasnt gauge a new function;
